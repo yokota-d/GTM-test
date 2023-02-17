@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-TBHPJLV');</script>
+    <!-- End Google Tag Manager -->
+    <title>GTMテスト</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 16px;
+            margin: 0;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            font-size: 18px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        button:hover {
+            background-color: #3e8e41;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TBHPJLV" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div class="container">
+        <h1>GTMテスト</h1>
+        <div>
+            <div>
+                <h2>クリックイベント用</h2>
+                <p>データ属性有</p>
+                <button id="button0" data-gtm-event="button-click">Click</button>
+                <p>データ属性無し</p>
+                <button id="button1">Click</button>
+            </div>
+            <div>
+                <h2>カスタムイベント用</h2>
+                <p>データ属性有</p>
+                <button id="button2" data-gtm-event="custom-event">Click</button>
+                <p>データ属性有無し</p>
+                <button id="button3">Click</button>
+            </div>
+        </div>
+</body>
+</div>
+<script>
+    let buttons = document.querySelectorAll('button');
+    buttons.forEach((button) => {
+        button.addEventListener('click', function (event) {
+            const buttonId = event.target.id;
+            switch (buttonId) {
+                case 'button0':
+                    alert('クリックイベント用のデータ属性有ボタンがクリックされました！');
+                    break;
+                case 'button1':
+                    alert('クリックイベント用のデータ属性無しボタンがクリックされました！');
+                    break;
+                case 'button2':
+                    alert('カスタムイベント用のデータ属性有ボタンがクリックされました！');
+                    break;
+                case 'button3':
+                    alert('カスタムイベント用のデータ属性無しボタンがクリックされました！');
+                    break;
+            }
+        });
+    });
+</script>
+
+</body>
+
+</html>
