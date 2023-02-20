@@ -69,37 +69,37 @@
             <div>
                 <h2>クリックイベント用</h2>
                 <p>データ属性有</p>
-                <button id="button0" data-gtm-click="button-click">クリック1</button>
+                <a href="/contact/" id="a0" data-gtm-click="link-click">リンク1</button>
                 <p>データ属性無し</p>
-                <button id="button1">クリック2</button>
+                <a href="/contact/" id="a1">リンク2</button>
             </div>
             <div>
                 <h2>カスタムイベント用</h2>
                 <p>データ属性有</p>
-                <button id="button2" data-gtm-click="custom-event">ボタン1</button>
+                <a href="/contact/" id="a2" data-gtm-click="custom-event">リンク1</button>
                 <p>データ属性有無し</p>
-                <button id="button3">ボタン2</button>
+                <a href="/contact/" id="a3">リンク2</button>
             </div>
         </div>
 </body>
 </div>
 <script>
-    let buttons = document.querySelectorAll('button');
-    buttons.forEach((button) => {
-        button.addEventListener('click', function (event) {
-            const buttonId = event.target.id;
-            switch (buttonId) {
-                case 'button0':
-                    alert('クリックイベント用のデータ属性有ボタンがクリックされました！');
+    let atags = document.querySelectorAll('a');
+    atags.forEach((atag) => {
+        atag.addEventListener('click', function (event) {
+            const atagId = event.target.id;
+            switch (atagId) {
+                case 'a0':
+                    alert('クリックイベント用のデータ属性有リンクがクリックされました！');
                     break;
-                case 'button1':
-                    alert('クリックイベント用のデータ属性無しボタンがクリックされました！');
+                case 'a1':
+                    alert('クリックイベント用のデータ属性無しリンクがクリックされました！');
                     break;
-                case 'button2':
-                    alert('カスタムイベント用のデータ属性有ボタンがクリックされました！');
+                case 'a2':
+                    alert('カスタムイベント用のデータ属性有リンクがクリックされました！');
                     break;
-                case 'button3':
-                    alert('カスタムイベント用のデータ属性無しボタンがクリックされました！');
+                case 'a3':
+                    alert('カスタムイベント用のデータ属性無しリンクがクリックされました！');
                     break;
             }
         });
